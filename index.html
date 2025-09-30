@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Structure</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+<nav class="navbar navbar-expand-lg backround-color-nav position-relative">
+  <div class="container-fluid">
+    <!-- Toggle button for mobile -->
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" id="menuToggler">
+  <i class="fas fa-bars"></i>
+</button>
+
+    <!-- Logo center for mobile -->
+    <a class="navbar-brand fw-bold" id="logo-text" href="#">Logo</a>
+
+    <!-- Cart on right -->
+    
+    <div class="d-lg-none card-text" id="cart-mobile">
+      <span>Cart(2)</span>
+    </div>
+
+    <!-- Desktop menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav fw-bold">
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Giving</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Proud</a></li>
+        <li class="nav-item"><a class="nav-link pro-underline" href="#">Pro Collection</a></li>
+      </ul>
+    </div>
+
+    <!-- Desktop Search -->
+    <div class="d-flex p-3 d-none d-lg-flex" id="set_search">
+      <div class="d-flex align-items-center px-2 text-set">
+        <span class="me-2 icon-color"><i class="fa-solid fa-search"></i></span>
+        <input type="text" class="border-0 my-search" placeholder="Search here..">
+      </div>
+      <div class="d-none d-lg-block card-text ms-auto me-3">
+      <span>Cart(2)</span>
+    </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Offcanvas menu for mobile -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Giving</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Proud</a></li>
+      <li class="nav-item"><a class="nav-link pro-underline" href="#">Pro Collection</a></li>
+    </ul>
+    <!-- Optional: search in mobile offcanvas -->
+    <div class="mt-3">
+      <div class="d-flex align-items-center px-2 text-set">
+        <span class="me-2 icon-color"><i class="fa-solid fa-search"></i></span>
+        <input type="text" class="border-1 form-control" placeholder="Search here..">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <div class="mt-2 d-none d-md-block">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Toothbrushes</a></li>
+      <li class="breadcrumb-item boldbreadcrumnb" aria-current="page">Humbel Brush Bamboo</li>
+    </ol>
+  </nav>
+</div>
+<div class="mt-2 d-block d-md-none">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item" aria-current="page">All Collection</li>
+    </ol>
+  </nav>
+</div>
+<div class="backround-box">
+      <div class="white-box mx-auto" style="max-width: 600px;">
+        <h1 class="shopstatement">Shop environment</h1>
+        <h1 class="heading-right">friendly quality goods</h1>
+    
+    </div>
+</div>
+  <div class="container mt-4">
+    <!-- Desktop View -->
+    <div class="navbar-flex d-none d-lg-flex">
+      <!-- Left Navbar List -->
+      <ul class="left-navbar d-flex mb-0 gap-3">
+        <li><a href="#" class="active">All Products</a></li>
+        <li><a href="#">Bamboo</a></li>
+        <li><a href="#">Plant-based</a></li>
+        <li><a href="#">Toothpastes</a></li>
+        <li><a href="#">Floss</a></li>
+      </ul>
+
+      <!-- Right Filter Dropdown -->
+      <div class="dropdown">
+        <button class="backround-none" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Filters <i class="fas fa-chevron-down ms-2 arrow-icon"></i>
+        </button>
+        <ul class="dropdown-menu filter-section" aria-labelledby="filterDropdown">
+          <li><a class="dropdown-item" href="#">Title</a></li>
+          <li><a class="dropdown-item" href="#">Price</a></li>
+          <li><a class="dropdown-item" href="#">Category</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobile View -->
+    <div class="mobile-navbar d-lg-none">
+  <div class="mobile-menu dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center" type="button" id="mobileCategoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      Sort By
+      <i class="ms-2 fas fa-chevron-down" id="mobileCategoryIcon"></i>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="mobileCategoryDropdown">
+      <li><a class="dropdown-item active" href="#">All Products</a></li>
+      <li><a class="dropdown-item" href="#">Bamboo</a></li>
+      <li><a class="dropdown-item" href="#">Plant-based</a></li>
+      <li><a class="dropdown-item" href="#">Toothpastes</a></li>
+      <li><a class="dropdown-item" href="#">Floss</a></li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+      <!-- Right Filter Dropdown -->
+      <div class="filter-section-wrapper dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filterDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
+          Filters <i class="fas fa-chevron-down ms-2"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="filterDropdownMobile">
+          <li><a class="dropdown-item" href="#">Title</a></li>
+          <li><a class="dropdown-item" href="#">Price</a></li>
+          <li><a class="dropdown-item" href="#">Category</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-4" id="product-container">
+        <div class="row g-4 justify-content-center" id="product-row">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </div>
+    <div class="container container_card" id="product-container-2">
+        <div class="row g-4 justify-content-center" id="product-row-2">
+            <!-- More products will be dynamically inserted here -->
+        </div>
+    </div>
+  
+</div>
+
+     <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
